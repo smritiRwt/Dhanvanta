@@ -38,7 +38,7 @@ export default function Services(){
         <article className="service-detail-card service-detail-card-wide">
           <span className="service-index">03</span>
           <h2>Health Insurance</h2>
-          <p>In today’s world, the rising cost of medical care is an unavoidable reality. From doctor visits and lab tests to pharmacy bills, the total cost of treatment can become overwhelming. The right health insurance helps you prepare for these expenses.</p>
+          <p>In today’s world, rising medical-care costs are an unavoidable reality. From initial doctor visits to lab tests and pharmacy bills, the cumulative expenses of comprehensive treatment can become overwhelming. The right health insurance helps you prepare for these expenses.</p>
           <h3>Key benefits</h3>
           <ul className="service-list service-list-columns">
             <li>Hospitalisation and day-care treatment cover</li>
