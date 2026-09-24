@@ -7,7 +7,7 @@ export default function Hero(){
       <div className="hero-inner">
         <div className="hero-copy">
           <span className="eyebrow">BUILD WITH PURPOSE</span>
-          <h1>Why Wealth Creation is Important for Middle-Class India</h1>
+          <h1>Why Wealth Creation is Important for People in India</h1>
           <p>Building wealth is not only for the rich. With disciplined saving, smart investing, proper insurance, and long-term planning, every family can work towards financial freedom.</p>
           <div className="hero-actions">
             <Link to="/contact" className="cta">Start Planning <span>↗</span></Link>
