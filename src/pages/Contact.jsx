@@ -16,7 +16,7 @@ export default function Contact(){
             <div><span>04</span>Child Education Planning</div>
           </div>
         </div>
-        <div className="contact-form-panel">
+        <div className="contact-form-panel" id="contact-form">
           <div className="form-panel-heading"><span>YOUR DETAILS</span><small>* Required fields</small></div>
           <LeadForm />
         </div>

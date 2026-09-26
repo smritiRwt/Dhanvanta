@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
+import {MousePointer2} from 'lucide-react'
 
 const navigation=[
   {label:'Home',to:'/#top'},
@@ -28,7 +29,7 @@ export default function Navbar(){
 
         <nav className="desktop-nav hidden xl:flex items-center">
           {navigation.map(item=><Link key={item.label} to={item.to} className="nav-link">{item.label}</Link>)}
-          <Link to="/contact" className="ml-2 cta">Get in touch</Link>
+          <Link to="/contact#contact-form" className="ml-2 cta query-cta">Ask your query? <MousePointer2 className="query-pointer" size={17} aria-hidden="true" /></Link>
         </nav>
 
         <div className="xl:hidden">
@@ -40,7 +41,7 @@ export default function Navbar(){
         <div className="xl:hidden">
           <nav className="mobile-menu">
             {navigation.map(item=><Link key={item.label} to={item.to} className="nav-link" onClick={()=>setOpen(false)}>{item.label}</Link>)}
-            <Link to="/contact" className="mt-2 cta" onClick={()=>setOpen(false)}>Get in touch</Link>
+            <Link to="/contact#contact-form" className="mt-2 cta query-cta" onClick={()=>setOpen(false)}>Ask your query? <MousePointer2 className="query-pointer" size={17} aria-hidden="true" /></Link>
           </nav>
         </div>
       )}
