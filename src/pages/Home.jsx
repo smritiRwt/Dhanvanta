@@ -8,7 +8,6 @@ export default function Home(){
   return (
     <div className="home-page single-page">
       <ReturnsEstimator />
-      <Hero />
       <section id="why-wealth" className="home-principles">
         <div className="section-heading">
           <span className="eyebrow">THE DHANVANTA WAY</span>
@@ -21,6 +20,7 @@ export default function Home(){
           <article className="principle-card"><div className="card-icon" aria-hidden="true"><Landmark size={34} strokeWidth={2}/></div><div className="card-number">04</div><h3>Financial Freedom</h3><p>Build a long-term plan aligned with your goals. Wealth is not just about earning more, it is about creating choices and confidence for the life you want.</p><span className="card-arrow">↗</span></article>
         </div>
       </section>
+      <Hero />
 
       <section id="about" className="content-section about-section">
         <div className="section-kicker">OUR PURPOSE</div>
