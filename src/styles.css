@@ -297,19 +297,13 @@ a { transition:color .2s ease, background-color .2s ease, border-color .2s ease,
 .health-intro { display:grid; grid-template-columns:1fr .82fr; align-items:end; gap:58px; margin-bottom:38px; }
 .health-intro h2 { max-width:530px; }
 .health-intro > p { margin:0 0 3px; color:var(--muted); font-size:.9rem; line-height:1.75; }
-.benefit-group-label { display:flex; align-items:center; gap:16px; margin:0 0 13px; color:var(--primary); font-size:.66rem; font-weight:700; letter-spacing:.14em; }
-.benefit-group-label i { height:1px; flex:1; background:var(--line); }
-.secondary-label { margin-top:29px; }
-.benefit-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:11px; }
-.benefit-card { min-height:143px; padding:17px; border:1px solid rgba(18,59,42,.09); border-radius:8px; background:#FFFFFF; transition:transform .2s ease,box-shadow .2s ease; }
-.benefit-card:hover { transform:translateY(-3px); box-shadow:0 12px 24px rgba(18,59,42,.075); }
-.benefit-icon { width:34px; height:34px; border-radius:10px; background:#DCFCE7; color:#16A34A; }
-.benefit-card:nth-child(5n + 2) .benefit-icon { background:#E0F2FE; color:#0EA5E9; }
-.benefit-card:nth-child(5n + 3) .benefit-icon { background:#FEF3C7; color:#B45309; }
-.benefit-card:nth-child(5n + 4) .benefit-icon { background:#FFE4E6; color:#F43F5E; }
-.benefit-card:nth-child(5n) .benefit-icon { background:#EDE9FE; color:#885CF6; }
-.benefit-card h3 { margin:13px 0 0; color:var(--ink); font-size:.83rem; line-height:1.35; }
-.benefit-card p { margin:7px 0 0; color:var(--muted); font-size:.72rem; line-height:1.5; }
+.health-benefits-heading { max-width:720px; margin:0 0 18px; }
+.health-benefits-heading h3 { margin:8px 0 0; color:var(--ink); font-size:1.45rem; line-height:1.2; }
+.health-benefits-heading > p { margin:8px 0 0; color:var(--muted); font-size:.86rem; line-height:1.6; }
+.benefit-checklist { max-width:940px; display:grid; gap:0; margin:0; padding:0; list-style:none; }
+.benefit-checklist li { display:grid; grid-template-columns:24px minmax(0,1fr); align-items:start; gap:13px; padding:15px 0; border-bottom:1px solid rgba(18,59,42,.1); color:var(--ink); font-size:1rem; line-height:1.55; }
+.benefit-check { display:grid; place-items:center; width:22px; height:22px; margin-top:1px; border:2px solid #16A34A; border-radius:50%; color:#16A34A; }
+.benefit-check svg { stroke-width:2.5; }
 .health-actions { display:flex; align-items:center; justify-content:center; gap:14px; margin-top:27px; }
 .view-benefits { display:inline-flex; align-items:center; gap:8px; padding:11px 15px; border:1px solid var(--line); border-radius:6px; background:#fff; color:var(--primary); font:inherit; font-size:.78rem; font-weight:700; cursor:pointer; }
 .view-benefits svg { transition:transform .2s ease; }.view-benefits .rotated { transform:rotate(45deg); }
@@ -388,7 +382,7 @@ a { transition:color .2s ease, background-color .2s ease, border-color .2s ease,
 	.product-heading .text-link { font-size:.73rem; }
 	.tax-section { grid-template-columns:1fr; gap:30px; padding:62px 20px; }
 	.tax-illustration { min-height:250px; }
-	.loan-grid,.benefit-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+	.loan-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
 	.health-intro { grid-template-columns:1fr; gap:17px; }
 	.returns-section { padding:62px 20px 72px; }
 	.returns-layout { grid-template-columns:1fr; gap:28px; }
@@ -396,14 +390,14 @@ a { transition:color .2s ease, background-color .2s ease, border-color .2s ease,
 }
 @media (max-width: 480px) {
 	.desktop-nav { display:none; }
-	.goal-grid,.loan-grid,.benefit-grid,.cashback-grid { grid-template-columns:1fr; }
+	.goal-grid,.loan-grid,.cashback-grid { grid-template-columns:1fr; }
 	.goal-card { min-height:105px; }
 	.product-heading { display:block; }
 	.product-heading .text-link { margin-top:17px; }
 	.product-grid { grid-template-columns:1fr; }
 	.product-card { min-height:190px; }
 	.loan-card { min-height:185px; }
-	.benefit-card { min-height:128px; }
+	.benefit-checklist li { grid-template-columns:22px minmax(0,1fr); gap:11px; padding:14px 0; font-size:.9rem; }
 	.health-actions { align-items:stretch; flex-direction:column; }
 	.health-actions > * { justify-content:center; }
 	.cashback-offer { min-height:290px; padding:22px; }

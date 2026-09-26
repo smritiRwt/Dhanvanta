@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
-import {ArrowRight,BriefcaseBusiness,Car,ChartNoAxesCombined,Check,Clock3,HeartPulse,House,Landmark,Percent,Plus,Shield,ShieldCheck,Stethoscope,WalletCards} from 'lucide-react'
+import {ArrowRight,BriefcaseBusiness,Car,ChartNoAxesCombined,Check,HeartPulse,House,Landmark,Percent,Plus,ShieldCheck,WalletCards} from 'lucide-react'
 
 const loanOptions=[
   {title:'Personal Loan',label:'PERSONAL NEEDS',description:'Explore flexible financing for planned expenses or an unexpected cost. Compare repayment terms before choosing an option.',fit:'Planned purchases, travel, or urgent expenses',icon:WalletCards},
@@ -12,18 +12,18 @@ const loanOptions=[
 ]
 
 const healthBenefits=[
-  {title:'Hospitalisation & day care',description:'Cover for eligible hospital stays and day-care procedures.',icon:Stethoscope},
-  {title:'Unlimited sum insured reset',description:'Restore your cover when you need it, subject to policy terms.',icon:Plus},
-  {title:'Cashless care across India',description:'Cashless treatment at any hospital in India, as described in the policy.',icon:HeartPulse},
-  {title:'AYUSH treatment',description:'Cover for eligible AYUSH treatment up to the sum insured.',icon:ShieldCheck},
-  {title:'Worldwide cashless hospitalisation',description:'Access eligible cashless hospitalisation worldwide, subject to policy terms.',icon:Shield},
-  {title:'Annual sum insured increase',description:'Sum insured can increase by 100% every year, irrespective of claims.',icon:ChartNoAxesCombined},
-  {title:'One unlimited claim',description:'Unlimited cover for one claim of your choice during the policy lifetime.',icon:HeartPulse},
-  {title:'Active renewal rewards',description:'Get up to 30% off renewals for staying active, subject to eligibility.',icon:Percent},
-  {title:'Pre & post-hospitalisation',description:'Eligible expenses covered from 90 days before to 180 days after hospitalisation.',icon:Clock3},
-  {title:'Road & air ambulance',description:'Ambulance cover up to the sum insured, as per policy terms.',icon:Car},
-  {title:'Customisable waiting periods',description:'Choose from available waiting-period options to suit your needs.',icon:Clock3},
-  {title:'Cashless OPD services',description:'Medicine orders and lab-test bookings are available for an additional premium.',icon:Stethoscope}
+  'Support for eligible hospital stays and day-care procedures.',
+  'A reset benefit may restore available cover when policy conditions are met.',
+  'Cashless treatment access at hospitals across India, subject to network and policy terms.',
+  'Renewal savings of up to 30% may apply for qualifying active-lifestyle milestones.',
+  'The available sum insured may grow by up to 100% each year, as defined by the policy.',
+  'An eligible claim of your choice may qualify for unlimited cover during the policy term.',
+  'Cover for eligible AYUSH treatment, up to the applicable sum insured.',
+  'Eligible medical expenses may be covered from 90 days before through 180 days after admission.',
+  'Road and air ambulance expenses may be covered up to the sum insured.',
+  'Select from available waiting-period options when choosing your policy.',
+  'Optional cashless OPD access can include medicine orders and lab-test bookings for an extra premium.',
+  'Worldwide cashless hospital care may be available where policy conditions are met.'
 ]
 
 const goals=[
@@ -76,8 +76,8 @@ export default function Services(){
 
       <section className="health-section" id="health-insurance">
         <div className="health-intro"><div><span className="eyebrow">HEALTH INSURANCE</span><h2>Care for your health. Confidence for your finances.</h2></div><p>In today’s world, the rising costs of medical care are an unavoidable reality. From initial doctor visits to lab tests and pharmacy bills, the cumulative expenses of comprehensive treatment can become overwhelming.</p></div>
-        <div className="benefit-group-label"><span>CARE & ACCESS</span><i/></div><div className="benefit-grid">{visibleBenefits.slice(0,5).map(({title,description,icon:Icon})=><article className="benefit-card" key={title}><span className="benefit-icon"><Icon size={20}/></span><h3>{title}</h3><p>{description}</p></article>)}</div>
-        {visibleBenefits.length>5&&<><div className="benefit-group-label secondary-label"><span>MORE WAYS TO FEEL PREPARED</span><i/></div><div className="benefit-grid">{visibleBenefits.slice(5).map(({title,description,icon:Icon})=><article className="benefit-card" key={title}><span className="benefit-icon"><Icon size={20}/></span><h3>{title}</h3><p>{description}</p></article>)}</div></>}
+        <div className="health-benefits-heading"><span className="eyebrow">COVER HIGHLIGHTS</span><h3>More ways to feel prepared</h3><p>Explore a few features that may support you through treatment and recovery.</p></div>
+        <ul className="benefit-checklist">{visibleBenefits.map((benefit,index)=><li key={index}><span className="benefit-check" aria-hidden="true"><Check size={15}/></span><span>{benefit}</span></li>)}</ul>
         <div className="health-actions"><button type="button" className="view-benefits" onClick={()=>setShowAllBenefits(!showAllBenefits)} aria-expanded={showAllBenefits}>{showAllBenefits ? 'View fewer benefits' : 'View all benefits'}<Plus size={16} className={showAllBenefits ? 'rotated' : ''}/></button><Link to="/contact" className="cta">Explore Health Insurance <ArrowRight size={17}/></Link></div>
         <small className="policy-disclaimer">Benefits, discounts, limits and eligibility are subject to the insurer’s policy wording, underwriting and applicable terms and conditions.</small>
       </section>
