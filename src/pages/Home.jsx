@@ -1,11 +1,13 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import ReturnsEstimator from '../components/ReturnsEstimator'
 import {Landmark, ShieldCheck, Sparkles, TrendingUp} from 'lucide-react'
 import Services from './Services'
 
 export default function Home(){
   return (
     <div className="home-page single-page">
+      <ReturnsEstimator />
       <Hero />
       <section id="why-wealth" className="home-principles">
         <div className="section-heading">

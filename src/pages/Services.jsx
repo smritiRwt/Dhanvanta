@@ -1,7 +1,6 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom'
 import {ArrowRight,BriefcaseBusiness,Car,ChartNoAxesCombined,Check,Clock3,HeartPulse,House,Landmark,Percent,Plus,Shield,ShieldCheck,Stethoscope,WalletCards} from 'lucide-react'
-import ReturnsEstimator from '../components/ReturnsEstimator'
 
 const loanOptions=[
   {title:'Personal Loan',label:'PERSONAL NEEDS',description:'Explore flexible financing for planned expenses or an unexpected cost. Compare repayment terms before choosing an option.',fit:'Planned purchases, travel, or urgent expenses',icon:WalletCards},
@@ -88,8 +87,6 @@ export default function Services(){
         <div className="cashback-grid"><article className="cashback-offer life-offer"><div className="cashback-offer-top"><span className="cashback-icon"><ShieldCheck size={22}/></span><span>01 / LIFE COVER</span></div><strong className="cashback-percent">10<sup>%</sup></strong><h3>Up to 10% Cashback</h3><p>On eligible life insurance policies. Review your cover needs and confirm offer details before you apply.</p><Link to="/contact" className="cashback-link">Check eligibility <ArrowRight size={16}/></Link><span className="offer-decoration" aria-hidden="true">✳</span></article><article className="cashback-offer health-offer"><div className="cashback-offer-top"><span className="cashback-icon"><HeartPulse size={22}/></span><span>02 / HEALTH COVER</span></div><strong className="cashback-percent">5<sup>%</sup></strong><h3>Up to 5% Cashback</h3><p>On eligible health insurance policies. Compare the benefits and policy terms alongside the offer.</p><Link to="/contact" className="cashback-link">Check eligibility <ArrowRight size={16}/></Link><span className="offer-decoration" aria-hidden="true">✳</span></article></div>
         <p className="cashback-disclaimer">Cashback is available only on eligible policies and is subject to applicable terms, conditions and insurer rules. Offer details may change.</p>
       </section>
-
-      <ReturnsEstimator/>
     </div>
   )
 }
