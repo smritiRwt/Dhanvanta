@@ -1,6 +1,7 @@
 import React from 'react'
 import Hero from '../components/Hero'
-import {HeartPulse, Landmark, Percent, ShieldCheck, Sparkles, TrendingUp} from 'lucide-react'
+import {Landmark, ShieldCheck, Sparkles, TrendingUp} from 'lucide-react'
+import Services from './Services'
 
 export default function Home(){
   return (
@@ -24,15 +25,7 @@ export default function Home(){
         <div className="split-content"><h2>Our Mission for Financial Freedom</h2><p>Our mission is to make investment guidance simple, practical, and accessible for every Indian family. We help you understand Mutual Funds, SIPs, stocks, and long-term wealth creation so you can make confident decisions and move closer to your financial goals.</p></div>
       </section>
 
-      <section id="services" className="content-section services-section">
-        <div className="section-heading"><span className="eyebrow">OUR SERVICES</span><h2>Find the right plan based on your goals.</h2></div>
-        <div className="service-grid">
-          <article><div className="service-icon" aria-hidden="true"><Percent size={34} strokeWidth={2}/></div><span className="service-index">01</span><h3>Tax Planning</h3><p>Plan your taxes and explore ways to create a tax-efficient retirement fund.</p><div className="service-why-static"><strong>Why important</strong><span>Keep more of your money working towards long-term goals.</span></div></article>
-          <article><div className="service-icon" aria-hidden="true"><Landmark size={34} strokeWidth={2}/></div><span className="service-index">02</span><h3>Loans</h3><ul className="service-list compact-service-list"><li>Personal loans</li><li>Home loans</li><li>Car loans</li><li>Property loans</li><li>Business loans</li><li>Loan against securities</li></ul><div className="service-why-static"><strong>Why important</strong><span>Choose borrowing that supports goals without avoidable debt stress.</span></div></article>
-          <article><div className="service-icon" aria-hidden="true"><HeartPulse size={34} strokeWidth={2}/></div><span className="service-index">03</span><h3>Health Insurance</h3><p>Prepare for hospitalisation, day-care treatment, medical expenses, and cashless care.</p><div className="service-why-static"><strong>Why important</strong><span>Protect your savings from unexpected medical expenses.</span></div></article>
-        </div>
-      </section>
-
+      <Services />
     </div>
   )
 }

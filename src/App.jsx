@@ -1,5 +1,5 @@
-import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import React,{useEffect} from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -11,6 +11,13 @@ import BlogDetails from './pages/BlogDetails'
 import Contact from './pages/Contact'
 
 export default function App(){
+  const location=useLocation()
+  useEffect(()=>{
+    if(!location.hash) return
+    const sectionId=decodeURIComponent(location.hash.slice(1))
+    requestAnimationFrame(()=>document.getElementById(sectionId)?.scrollIntoView({block:'start'}))
+  },[location.pathname,location.hash])
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

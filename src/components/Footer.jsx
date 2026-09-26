@@ -12,9 +12,9 @@ export default function Footer(){
         <div>
           <div className="font-semibold">Quick Links</div>
           <ul className="mt-2 text-sm text-muted">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/services">Our Services</Link></li>
+            <li><Link to="/#top">Home</Link></li>
+            <li><Link to="/#about">About Us</Link></li>
+            <li><Link to="/#services">Our Services</Link></li>
             <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
