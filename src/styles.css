@@ -40,6 +40,7 @@ a { transition:color .2s ease, background-color .2s ease, border-color .2s ease,
 }
 .menu-button { border:1px solid var(--line); padding:7px 10px; color:var(--primary); background:transparent; border-radius:4px; font-size:1.1rem; }
 .mobile-menu { padding:4px 20px 20px; display:flex; flex-direction:column; gap:16px; }
+.mobile-contact-action { display:none; }
 
 .card { padding:1.25rem; background:var(--surface); border:1px solid var(--line); border-radius:8px; box-shadow:0 8px 24px rgba(18,59,42,.06); }
 
@@ -356,6 +357,8 @@ a { transition:color .2s ease, background-color .2s ease, border-color .2s ease,
 @media (max-width: 1279px) {
 	.desktop-nav { display:none !important; }
 	.site-header .xl\:hidden { display:block; }
+	.mobile-contact-action { display:block; padding:0 20px 14px; }
+	.mobile-contact-action .cta { width:100%; justify-content:center; padding:.72rem 1rem; font-size:.82rem; }
 }
 @media (max-width: 1120px) {
 	.desktop-nav { gap:9px; }

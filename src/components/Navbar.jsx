@@ -37,11 +37,14 @@ export default function Navbar(){
         </div>
       </div>
 
+      <div className="mobile-contact-action">
+        <Link to="/contact#contact-form" className="cta query-cta">Get in touch <MousePointer2 className="query-pointer" size={17} aria-hidden="true" /></Link>
+      </div>
+
       {open && (
         <div className="xl:hidden">
           <nav className="mobile-menu">
             {navigation.map(item=><Link key={item.label} to={item.to} className="nav-link" onClick={()=>setOpen(false)}>{item.label}</Link>)}
-            <Link to="/contact#contact-form" className="mt-2 cta query-cta" onClick={()=>setOpen(false)}>Ask your query? <MousePointer2 className="query-pointer" size={17} aria-hidden="true" /></Link>
           </nav>
         </div>
       )}
