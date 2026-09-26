@@ -20,10 +20,8 @@ const healthBenefits=[
   'An eligible claim of your choice may qualify for unlimited cover during the policy term.',
   'Cover for eligible AYUSH treatment, up to the applicable sum insured.',
   'Eligible medical expenses may be covered from 90 days before through 180 days after admission.',
-  'Road and air ambulance expenses may be covered up to the sum insured.',
   'Select from available waiting-period options when choosing your policy.',
-  'Optional cashless OPD access can include medicine orders and lab-test bookings for an extra premium.',
-  'Worldwide cashless hospital care may be available where policy conditions are met.'
+  'Optional cashless OPD access can include medicine orders and lab-test bookings for an extra premium.'
 ]
 
 const goals=[
